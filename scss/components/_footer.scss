@@ -1,0 +1,53 @@
+.footer{
+    display: none;
+    @include third{
+        @include grid(10.8vh,12){
+            grid-area: 3/ 1/ 4/ -1;
+            background-color: $bg;
+        }
+    }
+    
+    .left{
+        @include flex{
+            justify-content: initial;
+            grid-area: 1/ 1/ 2/ 6;  
+            padding-left: 1rem;
+        }
+        
+    
+        .search{
+            cursor: pointer;
+            width: 2rem;        
+        }
+    }
+    
+    .right{
+        @include flex{
+            background-color: $secondary;
+            justify-content: space-evenly;
+            flex-direction: row;
+            grid-area: 1/ 6/ 2/ -1;
+        }
+    
+        .box{
+            border: 1px solid;
+            border-radius: 50%;
+            padding: 1rem;
+            line-height: 1;        
+            margin: 0;
+    
+            .image{
+                width: 1.5rem;
+            }
+    
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.1);
+
+                .image{
+                    width: 1.6rem;
+                }
+            }
+        }
+    }
+}

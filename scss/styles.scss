@@ -1,0 +1,16 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
+// Variables
+@import 'variables/var';
+
+// Base
+@import 'base/mixin';
+@import 'base/base';
+
+// Components
+@import 'components/header';
+@import 'components/nav';
+@import 'components/main';
+@import 'components/footer';

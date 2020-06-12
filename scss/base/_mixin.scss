@@ -1,0 +1,54 @@
+@mixin grid($height, $gridColumnNumbers){
+    height: $height;
+    display: grid;
+    grid-template-columns: repeat($gridColumnNumbers, 1fr);
+    @content;
+    @include third(){
+        grid-template-columns: repeat(12, 1fr);
+        grid-column: 1/ -1;
+    }
+}
+
+@mixin flex($height:100%){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $height;
+    @content;
+}
+
+@mixin btn{
+    border-radius: 5px;
+    padding: .2rem 1rem;
+    background-color: $secondary;
+    font-size: 1.4rem;
+
+    &:hover{
+        box-shadow: 0 0 10px rgba(255, 255, 255, .5);
+    }
+
+    &:active{
+        background-color: $secondaryActive;
+    }
+}
+
+// Responsive
+@mixin primary{
+    @media only screen and (max-width: 705px){
+        @content;
+    }
+}
+
+@mixin secondary{
+    @media only screen and (max-width: 595px){
+        @content;
+    }
+}
+
+@mixin third{
+    @media only screen and (max-width: 545px){
+        @content;
+    }
+}
+
+
