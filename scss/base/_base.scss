@@ -23,7 +23,7 @@ html{
 
         .container{
             @include grid(100vh, 12){
-                background: url('../images/hero.jpg') no-repeat center / cover;
+                background: url("../images/hero.jpg") no-repeat center / cover;
             }
         }
     }
